@@ -1,6 +1,8 @@
 # DNSトラブルシューティング
 - 14. Demo: DNS Troubleshooting(Optional) => 内容が？？？？？
 - おそらく、フルドメインネームはnamecheapでホストされ、subdomainのみRoute53でpointするのではなくフルもRoute53をpointするためのやりかた？のよう
+- namecheapを使っているとokだが、Route53だけでやろうとすると・・・の話らしい？Route53でhost zoneをcreateしてpointを向けないといけないので
+
 
 - kopsでcluster起動するにはDNSが正常に機能する必要がある
 ```
