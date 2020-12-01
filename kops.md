@@ -45,9 +45,27 @@ aws
 ```
 
 - AWS IAMで、programmatic access onlyのuser作成
-- userにAdministratorAccess付与（全部できる)
+- userをgroupに追加、AdministratorAccess付与（全部できる)
+- access key, secret access key取得
 
+```
+// access key、secret access key入力
+aws configure
 
+// credentialsファイル生成を確認
+ls -ahl ~/.aws/
+```
 
+### S3
+- s3 で新規bucket生成(kops-state-xxxxxx)、regionはclusterのregion
+- cloundping.infoサイトで自分の場所から最も低latencyのregion確認が可能
 
+### Route53：subdomain
+- kopsはsubdomainをmanagesするので、事前にRoute53で作成
+
+- Domain registration(.tkなど無料のものを)
+- domainすでにあり => domain management
+- Host Zone作成（費用かかる) => domain Name, 
+- valueがsub-domain
+- サイト：namecheapなどでadvanced DNSでNSレコード作成
 
