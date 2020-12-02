@@ -17,6 +17,16 @@ docker --version
 
 sudo apt-get install git
 // 開発者のgitをclone
-git clone xxxxxxxxxxxxx
+git clone xxxxxxxxxxxxx/docker-demo
+sudo usermod -G docker ubuntu
+logout
 
+// build docker
+cd docker-demo
+docker build .
+
+//3000でrunするしすてむを3000にexpose
+// -i : interactive mode
+docker run -p 3000:3000 -it xxxxxx 
+curl localhost:3000
 ```
