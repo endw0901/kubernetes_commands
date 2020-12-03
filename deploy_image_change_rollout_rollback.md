@@ -48,3 +48,17 @@ kubectl rollout history deployment/xxx-deployment
 // roll back
 kubectl rollout undo deployment/xxxx-deployment
 ```
+
+## edit
+
+- --to-revision=xで指定したrevisionへ
+
+```
+kubectl edit deployment/xxx-deployment
+kubectl set image deployment/xxx-deployment k8s-demo=xxxx/k8s-demo:2
+kubectl rollout history deployment/xxx-deployment
+
+// historyのrevision番号を指定してroll back
+kubectl rollout undo deployment/xxx-deployment --to-revision=3
+
+```
